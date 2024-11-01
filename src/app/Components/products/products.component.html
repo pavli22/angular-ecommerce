@@ -1,7 +1,7 @@
 <section>
     <div class="container">
         <h1 class="title-shop text-center">Prodcuts</h1>
-        <div class="row g-4 py-5">
+        <div class="row g-2 py-5">
             @for (item of ProductList; track item.id) {
             <div class="col-md-3">
                 <div class="product-single-card">
@@ -52,7 +52,7 @@
                             </div>
                             <span class="review-count">({{item.rating.count}})</span>
                         </div>
-                        <div class="d-flex flex-nowrap align-items-center justify-content-between py-2">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between py-2">
                             <div class="old-price">
                                 $50.45
                             </div>
