@@ -149,16 +149,11 @@ a {
   font-weight: 600;
 }
 
-.product-single-card .product-info .old-price,
 .product-single-card .product-info .new-price {
   padding-right: 15px;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
-}
-.product-single-card .product-info .old-price {
-  text-decoration: line-through;
-  opacity: 70%;
 }
 
 .product-single-card .product-info .category-badge {
