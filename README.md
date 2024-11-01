@@ -1,27 +1,64 @@
-# Task
+# Simple E-Commerce Project with Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+This is a **mini e-commerce application** built using Angular and the [Fake Store API](https://fakestoreapi.com/). The project currently features a **product page** where all products are fetched from the API and displayed in a clean, responsive layout.
 
-## Development server
+## Project Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The application is designed to serve as a **starter template for e-commerce platforms** and was built with scalability in mind. The structure, folder organization, and design choices make it easy to extend the project in the future by adding more features, components, and pages.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **API Integration**: The product data is fetched from the Fake Store API, simulating real-world product listings.
+- **Product Page**: Displays all available products from the API in an organized, stylish layout.
+- **Angular Interceptors**: Used to manage HTTP requests, add headers, and handle potential errors.
+- **Custom Pipes**: For transforming data in the template, such as formatting prices or filtering content.
+- **Well-Organized Folder Structure**: Designed with scalability in mind, making it easy to add features in the future.
 
-## Build
+## Future Enhancements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This project is structured for future extensions, such as:
 
-## Running unit tests
+- **Shopping Cart**: Add to cart functionality, displaying selected products, and updating quantities.
+- **Product Filters**: Filtering products by category, price, or rating.
+- **User Authentication**: User login, registration, and profile management.
+- **Checkout Process**: A complete checkout page with order summary, payment integration, and order confirmation.
+- **Product Reviews**: Displaying and adding reviews for products.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+- **Angular**: For building a robust and scalable single-page application.
+- **Angular HTTPClient & Interceptors**: To fetch data from the API and manage HTTP requests efficiently.
+- **CSS & Bootstrap & Angular Styling**: For a responsive and clean product display.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Setup & Installation
 
-## Further help
+1. Clone this repository:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   git clone https://github.com/pavli22/angular-ecommerce.git
+   cd angular-ecommerce
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   ng serve
+   ```
+   Navigate to `http://localhost:4200/` to see the app in action.
+
+## API Reference
+
+This project uses the [Fake Store API](https://fakestoreapi.com/), a free and open-source API that provides product data, such as titles, rating, prices, categories, descriptions, and images.
+
+## Contributing
+
+Contributions are welcome! Please open an issue first to discuss what you would like to change or add. Fork the repository and create a new branch for any new features.
+
+---
+
+This project serves as a starting point for a full-featured e-commerce application and showcases the power of Angular in building dynamic, data-driven applications. Happy coding!

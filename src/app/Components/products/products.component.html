@@ -1,0 +1,73 @@
+<section>
+    <div class="container">
+        <h1 class="title-shop text-center">Prodcuts</h1>
+        <div class="row g-4 py-5">
+            @for (item of ProductList; track item.id) {
+            <div class="col-md-3">
+                <div class="product-single-card">
+                    <div class="product-top-area">
+                        <div class="product-discount">
+                            {{item.price|currency}}
+                        </div>
+                        <div class="product-img">
+                            <div class="first-view">
+                                <img [src]="item.image" alt="logo" class="img-fluid"
+                                    onerror="this.src='https://i.ibb.co/qpB9ZCZ/placeholder.png'">
+                            </div>
+                            <div class="hover-view">
+                                <img [src]="item.image" alt="logo" class="img-fluid"
+                                    onerror="this.src='https://i.ibb.co/qpB9ZCZ/placeholder.png'">
+                            </div>
+                        </div>
+                        <div class="sideicons">
+                            <button class="sideicons-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                            <button class="sideicons-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button class="sideicons-btn">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                            <button class="sideicons-btn">
+                                <i class="fa-solid fa-shuffle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h6 class="product-category"><a> {{item.title}}</a></h6>
+                        <h6 class="product-title text-truncate"><a> {{item.description}}</a></h6>
+                        <div class="d-flex align-items-center">
+                            <div class="review-star me-1">
+                                <ng-container *ngFor="let star of [].constructor(5); let i = index">
+                                    <i class="fa-solid fa-star" *ngIf="i <FLOOR(item.rating.rate); else halfStar"></i>
+                                    <ng-template #halfStar>
+                                        <i class="fa-regular fa-star-half-stroke"
+                                            *ngIf="i ===  FLOOR(item.rating.rate) && item.rating.rate % 1 !== 0"></i>
+                                    </ng-template>
+                                    <ng-container *ngIf="i >= FLOOR(item.rating.rate)">
+                                        <i class="fa-regular fa-star"></i>
+                                    </ng-container>
+                                </ng-container>
+                            </div>
+                            <span class="review-count">({{item.rating.count}})</span>
+                        </div>
+                        <div class="d-flex flex-nowrap align-items-center justify-content-between py-2">
+                            <div class="old-price">
+                                $50.45
+                            </div>
+                            <div class="new-price">
+                                {{item.price|currency}}
+                            </div>
+                            <div class="category-badge">
+                                {{item.category}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            }
+        </div>
+    </div>
+</section>

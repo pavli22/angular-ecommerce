@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/saga-blue/theme.css"; // Choose a theme here
+@import "primeng/resources/primeng.min.css"; // PrimeNG core CSS
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600");
+
+a {
+  cursor: pointer;
+}
